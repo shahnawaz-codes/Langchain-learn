@@ -11,6 +11,7 @@ langchain-huggingface
 transformers
 huggingface-hub
 torch
+torchvision
 
 # Environment Variable Management
 python-dotenv

@@ -6,12 +6,12 @@ from langchain.chat_models import init_chat_model
 load_dotenv()
 
 
-model = init_chat_model("huggingface:deepseek-ai/DeepSeek-R1")
+# model = init_chat_model("huggingface:deepseek-ai/DeepSeek-R1")
 
-# llm = HuggingFaceEndpoint(
-#     repo_id="deepseek-ai/DeepSeek-R1",    task="text-generation",
-# )
+llm = HuggingFaceEndpoint(
+    repo_id="deepseek-ai/DeepSeek-R1",    task="text-generation",
+)
 
-# model = ChatHuggingFace(llm=llm)
+model = ChatHuggingFace(llm=llm)
 result = model.invoke("What is the capital of France?")
 print(result.content)
